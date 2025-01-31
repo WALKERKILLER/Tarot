@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>神秘塔罗占卜 🔮</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 粒子背景容器 -->
+    <div id="particles"></div>
+    
+    <div class="container">
+        <h1>✨ 神秘塔罗占卜 ✨</h1>
+        
+        <!-- 占卜流程步骤 -->
+        <div class="ritual-steps">
+            <div class="step" data-step="1">🕯️ 冥想净化</div>
+            <div class="step" data-step="2">🌙 提出问题</div>
+            <div class="step" data-step="3">🔮 抽取命运</div>
+        </div>
+
+        <!-- 占卜区域 -->
+        <div id="ritual-container">
+            <p id="ritual-text" class="fade-in">闭上眼睛，深呼吸，让心灵沉淀...</p>
+            <button id="startBtn" class="cta-btn">
+                <span class="glow-text">🖐️ 触摸命运</span>
+            </button>
+        </div>
+
+        <!-- 卡牌展示区域 -->
+        <div id="cards-container" class="hidden">
+            <div class="cards-spread">
+                <div class="card-slot" data-position="past">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-face card-back"></div>
+                            <div class="card-face card-front">
+                                <div class="card-content">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-orientation"></p>
+                                    <p class="card-meaning"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-slot" data-position="present">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-face card-back"></div>
+                            <div class="card-face card-front">
+                                <div class="card-content">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-orientation"></p>
+                                    <p class="card-meaning"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-slot" data-position="future">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-face card-back"></div>
+                            <div class="card-face card-front">
+                                <div class="card-content">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-orientation"></p>
+                                    <p class="card-meaning"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 解读区域 -->
+        <div id="reading-container" class="hidden">
+            <h2>🌟 命运启示录 🌟</h2>
+            <div id="reading-content"></div>
+            <div id="fortune-advice"></div>
+            <div id="fun-fact"></div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <button id="new-reading" class="cta-btn hidden">
+            <span class="glow-text">✨ 开启新的占卜</span>
+        </button>
+    </div>
+
+    <!-- 音乐控制器 -->
+    <div id="music-controller" class="music-controller">
+        <button id="toggleMusic" class="music-btn">🎵</button>
+    </div>
+
+    <!-- 加载脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="tarot.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
